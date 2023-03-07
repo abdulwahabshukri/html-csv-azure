@@ -1,0 +1,21 @@
+.form-container {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="button"] {
+    display: block;
+    margin: 10px auto;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+}
+
+input[type="button"] {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}

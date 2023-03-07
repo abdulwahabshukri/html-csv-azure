@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Webseite mit CSV-Export</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div class="form-container">
+        <h2>Bitte geben Sie Ihre Informationen ein:</h2>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="vorname">Vorname:</label>
+            <input type="text" id="vorname" name="vorname" required>
+
+            <label for="alter">Alter:</label>
+            <input type="number" id="alter" name="alter" required>
+
+            <input type="button" value="Senden" onclick="exportToCsv()">
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
