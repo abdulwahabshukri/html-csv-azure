@@ -58,6 +58,6 @@ jobs:
         uses: azure/webapps-container-deploy@v1
         with:
           app-name: 'abdulwahab-web-csv'
-          image-name: 'my-docker-image'
+          image-name: 'Production'
           port: '8080'
 
