@@ -1,11 +1,11 @@
 {
-    "name": "html-csv-azure",
-    "version": "1.0.0",
-    "description": "",
-    "main": "script.js",
-    "scripts": {
-        "test": "echo 'Running tests...' && exit 0"
-    },
-    "author": "abdulwahab",
-    "license": "ISC"
+  "name": "html-csv-azure",
+  "version": "1.0.0",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo 'Running tests...' && exit 0"
+  },
+  "author": "abdulwahab",
+  "license": "ISC",
+  "description": ""
 }
