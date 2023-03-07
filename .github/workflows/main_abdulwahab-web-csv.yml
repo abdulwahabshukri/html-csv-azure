@@ -54,3 +54,10 @@ jobs:
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_C3B5304246E04C38A891493044150E0C }}
           package: .
+      - name: 'Configure container settings'
+        uses: azure/webapps-container-deploy@v1
+        with:
+          app-name: 'abdulwahab-web-csv'
+          image-name: 'my-docker-image'
+          port: '8080'
+
