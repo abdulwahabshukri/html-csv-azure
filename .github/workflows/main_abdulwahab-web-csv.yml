@@ -53,7 +53,6 @@ jobs:
           app-name: 'abdulwahab-web-csv'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_C3B5304246E04C38A891493044150E0C }}
-          container-command: 'npm start'
           package: .
           port: 8080
         
