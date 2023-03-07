@@ -50,7 +50,6 @@ jobs:
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v2
         with:
-          images: 'abdulwahab-web-csv_0_b474241a'
           app-name: 'abdulwahab-web-csv'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_C3B5304246E04C38A891493044150E0C }}
