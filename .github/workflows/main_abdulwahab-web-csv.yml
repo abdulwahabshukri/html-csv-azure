@@ -22,15 +22,15 @@ jobs:
     - name: Log in to registry
       uses: docker/login-action@v1
       with:
-        registry: https://abdulwahab-web-csv.azurewebsites.net/
-        username: ${{ secrets.AzureAppService_ContainerUsername_1d33f4d058254271b18666fe3886e47d }}
-        password: ${{ secrets.AzureAppService_ContainerPassword_d080619875774d92afd731f22ce179b7 }}
+        registry: https://index.docker.io/
+        username: ${{ secrets.AzureAppService_ContainerUsername_e3d801ca4a6b458a9539ecf6636a0156 }}
+        password: ${{ secrets.AzureAppService_ContainerPassword_fca0bbfd8bf844a0868559d0712808c5 }}
 
     - name: Build and push container image to registry
       uses: docker/build-push-action@v2
       with:
         push: true
-        tags: abdulwahab-web-csv.azurewebsites.net/${{ secrets.AzureAppService_ContainerUsername_1d33f4d058254271b18666fe3886e47d }}/abdulwahab-web-csv_0_b474241a:${{ github.sha }}
+        tags: index.docker.io/${{ secrets.AzureAppService_ContainerUsername_e3d801ca4a6b458a9539ecf6636a0156 }}/abdulwahab-web-csv_0_b474241a:${{ github.sha }}
         file: ./Dockerfile
 
   deploy:
@@ -47,5 +47,5 @@ jobs:
       with:
         app-name: 'abdulwahab-web-csv'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_5b5a5462e45e448d89a62df4110eb7a2 }}
-        images: 'abdulwahab-web-csv.azurewebsites.net/${{ secrets.AzureAppService_ContainerUsername_1d33f4d058254271b18666fe3886e47d }}/abdulwahab-web-csv_0_b474241a:${{ github.sha }}'
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_3beffa1b5de3423ebcca3fd2f7cb2e02 }}
+        images: 'index.docker.io/${{ secrets.AzureAppService_ContainerUsername_e3d801ca4a6b458a9539ecf6636a0156 }}/abdulwahab-web-csv_0_b474241a:${{ github.sha }}'
