@@ -46,22 +46,14 @@ jobs:
         with:
           name: node-app
 
-#      - name: 'Deploy to Azure Web App'
- #       id: deploy-to-webapp
-  #      uses: azure/webapps-deploy@v2
-   #     with:
-    #      app-name: 'abdulwahab-web-csv'
-     #     slot-name: 'Production'
-      #    publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_C3B5304246E04C38A891493044150E0C }}
-       #   package: .
       - name: 'Deploy to Azure Web App'
         id: deploy-to-webapp
-        uses: azure/webapps-container-deploy@v2
+        uses: azure/webapps-deploy@v2
         with:
-          images: 'abdulwahab-web-csv'
           app-name: 'abdulwahab-web-csv'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_C3B5304246E04C38A891493044150E0C }}
-          container-command: 'npm start'
+          package: .
           port: 8080
+      
 
