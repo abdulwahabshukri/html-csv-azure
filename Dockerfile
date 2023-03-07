@@ -14,10 +14,10 @@ RUN npm install
 COPY . .
 
 # Set the environment variable for production mode
-ENV NODE_ENV production
+# ENV NODE_ENV production
 
-# Expose port 80 for the web server
-EXPOSE 80
+# Expose port 8080 for the web server
+EXPOSE 8080
 
 # Start the web server
 CMD [ "npm", "start" ]
