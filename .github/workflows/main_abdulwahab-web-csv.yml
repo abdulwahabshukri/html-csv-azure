@@ -48,7 +48,7 @@ jobs:
       
       - name: 'Deploy to Azure Web App'
         id: deploy-to-webapp
-        uses: azure/webapps-container-deploy@v2
+        uses: azure/webapps-container-deploy@v3
         with:
           images: 'appsvc/node:18-lts_20221208.1.tuxprod'
           app-name: 'abdulwahab-web-csv'
