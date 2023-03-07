@@ -45,15 +45,25 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: node-app
-
+      
       - name: 'Deploy to Azure Web App'
         id: deploy-to-webapp
-        uses: azure/webapps-deploy@v2
+        uses: azure/webapps-container-deploy@v2
         with:
+          images: 'appsvc/node:18-lts_20221208.1.tuxprod'
           app-name: 'abdulwahab-web-csv'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_C3B5304246E04C38A891493044150E0C }}
-          package: .
+          container-command: 'npm start'
           port: 8080
+#      - name: 'Deploy to Azure Web App'
+ #       id: deploy-to-webapp
+  #      uses: azure/webapps-deploy@v2
+   #     with:
+    #      app-name: 'abdulwahab-web-csv'
+     #     slot-name: 'Production'
+      #    publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_C3B5304246E04C38A891493044150E0C }}
+       #   package: .
+        
       
 
